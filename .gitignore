@@ -112,9 +112,7 @@
 /app/code/community/Interactiv4/GAConversionTrack/sql/*
 !/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup
 /app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/*
-!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-install-0.1.0.php
-!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.0-0.1.1.php
-!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.2-0.1.3.php
+!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade*.php
 !/app/design
 /app/design/*
 !/app/design/frontend
