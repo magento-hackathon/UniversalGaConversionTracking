@@ -92,4 +92,21 @@ class Interactiv4_GAConversionTrack_Model_Observer
         $trackData->setData('i4gaconversiontrack_browser_java_enabled', $request->getParam('i4gaconversiontrack_browser_java_enabled'));
         $order->setData('i4gaconversiontrack_track_data', serialize($trackData));
     }
+    
+    /**
+     * Add order information into GA block to render on checkout success pages
+     *
+     * @param Varien_Event_Observer $observer
+     */
+    public function setGoogleAnalyticsOnOrderSuccessPageView(Varien_Event_Observer $observer)
+    {
+        $orderIds = $observer->getEvent()->getOrderIds();
+        if (empty($orderIds) || !is_array($orderIds)) {
+            return;
+        }
+        $block = Mage::app()->getFrontController()->getAction()->getLayout()->getBlock('google_analytics_universal');
+        if ($block) {
+            $block->setOrderIds($orderIds);
+        }
+    }
 }

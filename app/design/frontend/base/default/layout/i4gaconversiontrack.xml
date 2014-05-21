@@ -9,6 +9,15 @@
  */
 -->
 <layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="core/text_list" name="ua_before_head_end" as="ua_before_head_end" />
+        </reference>
+        <reference name="ua_before_head_end">
+            <block type="i4gaconversiontrack/ua" name="google_analytics_universal" as="google_universal_analytics" template="i4gaconversiontrack/ua.phtml" />
+        </reference>
+    </default>
+    
     <checkout_onepage_success>
         <reference name="after_body_start">
             <remove name="google_analytics" />
