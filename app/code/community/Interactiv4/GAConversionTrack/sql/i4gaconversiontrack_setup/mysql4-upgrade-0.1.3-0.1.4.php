@@ -8,6 +8,6 @@
  */
 $this->startSetup();
 
-$this->addAttribute('order', 'i4gaconversiontrack_track_data', array('type' => 'longtext'));
+$this->addAttribute('order', 'i4gaconversiontrack_track_data', array('type' => 'text'));
 
 $this->endSetup();
