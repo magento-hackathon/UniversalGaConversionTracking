@@ -110,7 +110,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>This tracks the following actions; follow, unfollow, tweet, retweet, favorite</comment>
+                            <comment><![CDATA[This tracks the following actions; follow, unfollow, tweet, retweet, favorite<br/><b>TODO:</b> Twitter not implemented yet!]]></comment>
                         </twitter_interactions>
                     </fields>
                 </social>
