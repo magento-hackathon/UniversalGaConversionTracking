@@ -14,8 +14,17 @@ class Interactiv4_GAConversionTrack_Model_Observer
 
         if (Mage::helper('i4gaconversiontrack')->isAvailable($order->getStoreId())
             && !$order->getData('i4gaconversiontrack_tracked')
-            & in_array($order->getStatus(), $statusesToTrack)
         ) {
+            $pass = false;
+            foreach($statusesToTrack as $statusToTrack) {
+                if($order->getState() == $statusToTrack['state']
+                    &&
+                    $order->getStatus() == $statusToTrack['status']
+                ) {
+                    $pass = true; // if any of the state/status combination matches, pass it through
+                }
+            }
+            if(!$pass) return;
             $store = Mage::app()->getStore($order->getStoreId());
             $googleAnalyticsAccountId = Mage::helper('i4gaconversiontrack')->getGoogleAnalyticsAccountId($order->getStoreId());
             $domain = parse_url($store->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB), PHP_URL_HOST);

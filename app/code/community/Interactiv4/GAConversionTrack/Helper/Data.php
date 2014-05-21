@@ -23,7 +23,7 @@ class Interactiv4_GAConversionTrack_Helper_Data extends Mage_Core_Helper_Abstrac
     }
 
     public function getStatusesToTrack($store = null){
-        $statusesToTrack = Mage::getStoreConfig(self::XML_PATH_ORDER_STATUS, $store);
-        return explode(',', $statusesToTrack);
+        $statusesToTrack = unserialize(Mage::getStoreConfig(self::XML_PATH_ORDER_STATUS, $store));
+        return $statusesToTrack;
     }
 }
