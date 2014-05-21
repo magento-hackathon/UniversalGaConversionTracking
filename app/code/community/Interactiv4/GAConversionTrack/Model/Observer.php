@@ -28,13 +28,13 @@ class Interactiv4_GAConversionTrack_Model_Observer
             $store = Mage::app()->getStore($order->getStoreId());
             $googleAnalyticsAccountId = Mage::helper('i4gaconversiontrack')->getGoogleAnalyticsAccountId($order->getStoreId());
             $domain = parse_url($store->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB), PHP_URL_HOST);
+            $trackData = unserialize($order->getData('i4gaconversiontrack_track_data'));
             $ga_tracking = new Interactiv4_GAConversionTrack_Model_Tracking(
                 $googleAnalyticsAccountId,
                 $domain,
-                $order->getData('i4gaconversiontrack_user_agent')
+                $trackData->getData('i4gaconversiontrack_user_agent')
             );
             $ga_tracking->setData('utmip', $order->getRemoteIp());
-            $trackData = unserialize($order->getData('i4gaconversiontrack_track_data'));
             $ga_tracking->setData('utmsr', $trackData->getData('i4gaconversiontrack_screen_resolution'));
             $ga_tracking->setData('utmsc', $trackData->getData('i4gaconversiontrack_screen_color_depth'));
             $ga_tracking->setData('utmul', $trackData->getData('i4gaconversiontrack_browser_language'));
