@@ -36,7 +36,7 @@
 /app/code/community/Interactiv4/GAConversionTrack/*
 !/app/code/community/Interactiv4/GAConversionTrack/Block
 /app/code/community/Interactiv4/GAConversionTrack/Block/*
-!/app/code/community/Interactiv4/GAConversionTrack/Block/System
+!/app/code/community/Interactiv4/GAConversionTrack/Block/Ua.php
 /app/code/community/Interactiv4/GAConversionTrack/Block/System/*
 !/app/code/community/Interactiv4/GAConversionTrack/Block/System/Config
 /app/code/community/Interactiv4/GAConversionTrack/Block/System/Config/*
@@ -92,8 +92,6 @@
 !/js
 /js/*
 !/js/i4gaconversiontrack
-/js/i4gaconversiontrack/*
-!/js/i4gaconversiontrack/i4gaconversiontrack.js
 !/package.xml
 !.gitignore
 

@@ -12,9 +12,18 @@
     <default>
         <reference name="head">
             <block type="core/text_list" name="ua_before_head_end" as="ua_before_head_end" />
+            <action method="addJs"><script>i4gaconversiontrack/social_interaction.js</script></action>
         </reference>
         <reference name="ua_before_head_end">
             <block type="i4gaconversiontrack/ua" name="google_analytics_universal" as="google_universal_analytics" template="i4gaconversiontrack/ua.phtml" />
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="social" template="i4gaconversiontrack/social_interactions.phtml" output="toHtml">
+                <action method="setData" ifconfig="i4gaconversiontrack/social/fb_like"><name>fb_like</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/fb_unlike"><name>fb_unlike</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/fb_share"><name>fb_share</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/twitter_interactions"><name>twitter_interactions</name><value>1</value></action>
+            </block>
         </reference>
     </default>
     
