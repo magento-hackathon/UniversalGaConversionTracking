@@ -11,8 +11,7 @@
 
 class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
 {
-    const GA_URL = 'http://www.google-analytics.com';
-    const GA_BEACON = '/__utm.gif?';
+    const GA_URL = 'http://www.google-analytics.com/collect';
 
     const REQUEST_TYPE_PAGE = 'page';
     const REQUEST_TYPE_EVENT = 'event';
@@ -30,6 +29,10 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
      */
     public function __construct($ga_account, $domain, $agent = 'GA Agent') {
         $init_data = array(
+            'v'         => 1,
+            'tid'       => $ga_account,
+            'cid'       => 555,
+
             'utmwv'     => '4.4sh',
             'utmcs'     => 'UTF-8',
             'utmul'     => 'en-us',
@@ -40,7 +43,10 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmac'     => $ga_account,
             'utmhn'     => $domain,
 
-            'user_agent' => $agent
+            'user_agent' => $agent,
+
+            'uip'       => $this->getData('uip'),
+            'ua'        => $this->getData('ua')
         );
 
         parent::__construct($init_data);
@@ -55,6 +61,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
 
     public function pageView($title, $page, $utmhid = null) {
         $params = array(
+            't'         => 'pageview',
             'utmwv'     => $this->getData('utmwv'),
             'utmn'      => $this->getData('utmn'),
             'utmhn'     => $this->getData('utmhn'),
@@ -82,6 +89,10 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
      */
     public function addTransaction($order_id, $total, $store_name = null, $tax = null, $shipping = null, $city = null, $region = null, $country = null, $utmhid = null) {
         $params = array(
+            'v'         => $this->getData('v'),
+            'tid'       => $this->getData('tid'),
+            'cid'       => $this->getData('cid'),
+            't'         => 'transaction',
             'utmwv'     => $this->getData('utmwv'),
             'utmn'      => $this->getData('utmn'),
             'utmhn'     => $this->getData('utmhn'),
@@ -103,7 +114,9 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmtrg'    => $region,
             'utmtco'    => $country,
             'utmr'      => $this->getData('utmr'),
-            'utmip'     => $this->getData('utmip')
+            'utmip'     => $this->getData('utmip'),
+            'ua'      => $this->getData('ua'),
+            'uip'     => $this->getData('uip')
         );
 
         return $this->request($params);
@@ -190,17 +203,10 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
      * @return String
      */
     public function request($params){
-        $query = http_build_query($params);
+        $client = new Zend_Http_Client(self::GA_URL);
+        $client->setParameterPost($params);
 
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_URL => self::GA_URL . self::GA_BEACON . $query,
-            CURLOPT_USERAGENT => $this->getData('user_agent')
-        ));
-
-        $response = curl_exec($curl);
-        curl_close($curl);
+        $response = $client->request(Zend_Http_Client::POST);
 
         return $response;
     }
