@@ -89,6 +89,5 @@ class Interactiv4_GAConversionTrack_Model_Observer
         $trackData->setData('i4gaconversiontrack_browser_language', $request->getParam('i4gaconversiontrack_browser_language'));
         $trackData->setData('i4gaconversiontrack_browser_java_enabled', $request->getParam('i4gaconversiontrack_browser_java_enabled'));
         $order->setData('i4gaconversiontrack_track_data', serialize($trackData->getData()));
-        $order->save();
     }
 }
