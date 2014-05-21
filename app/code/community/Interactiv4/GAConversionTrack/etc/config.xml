@@ -103,6 +103,12 @@
                 <page_title>Checkout success</page_title>
                 <page_url>/checkout/onepage/success</page_url>
             </general>
+            <social>
+                <fb_like>1</fb_like>
+                <fb_unlike>1</fb_unlike>
+                <fb_share>1</fb_share>
+                <twitter_interactions>1</twitter_interactions>
+            </social>
         </i4gaconversiontrack>
     </default>
 </config>
