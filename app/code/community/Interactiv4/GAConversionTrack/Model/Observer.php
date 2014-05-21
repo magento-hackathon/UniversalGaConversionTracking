@@ -34,12 +34,11 @@ class Interactiv4_GAConversionTrack_Model_Observer
                 $domain,
                 $trackData->getData('i4gaconversiontrack_user_agent')
             );
-            $ga_tracking->setData('utmip', $order->getRemoteIp());
-            $ga_tracking->setData('utmsr', $trackData->getData('i4gaconversiontrack_screen_resolution'));
-            $ga_tracking->setData('utmsc', $trackData->getData('i4gaconversiontrack_screen_color_depth'));
-            $ga_tracking->setData('utmul', $trackData->getData('i4gaconversiontrack_browser_language'));
-            $ga_tracking->setData('utmje', $trackData->getData('i4gaconversiontrack_browser_java_enabled'));
             $ga_tracking->setData('uip', $order->getRemoteIp());
+            $ga_tracking->setData('sr', $trackData->getData('i4gaconversiontrack_screen_resolution'));
+            $ga_tracking->setData('sd', $trackData->getData('i4gaconversiontrack_screen_color_depth'));
+            $ga_tracking->setData('ul', $trackData->getData('i4gaconversiontrack_browser_language'));
+            $ga_tracking->setData('je', $trackData->getData('i4gaconversiontrack_browser_java_enabled'));
             $ga_tracking->setData('ua', $trackData->getData('i4gaconversiontrack_user_agent'));
 
             $ga_tracking->pageView(Mage::getStoreConfig('i4gaconversiontrack/general/page_title', $store), Mage::getStoreConfig('i4gaconversiontrack/general/page_url', $store));
