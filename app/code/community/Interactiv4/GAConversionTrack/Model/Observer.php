@@ -10,11 +10,11 @@ class Interactiv4_GAConversionTrack_Model_Observer
 {
     public function track($observer) {
         $order = $observer->getEvent()->getOrder();
-        $statusesToTrack = Mage::helper('i4gaconversiontrack')->getStatusesToTrack($order->getStoreId());
 
         if (Mage::helper('i4gaconversiontrack')->isAvailable($order->getStoreId())
             && !$order->getData('i4gaconversiontrack_tracked')
         ) {
+            $statusesToTrack = Mage::helper('i4gaconversiontrack')->getStatusesToTrack($order->getStoreId());
             $pass = false;
             foreach($statusesToTrack as $statusToTrack) {
                 if($order->getState() == $statusToTrack['state']
