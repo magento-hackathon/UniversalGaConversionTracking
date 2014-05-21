@@ -15,7 +15,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
 
     const REQUEST_TYPE_PAGE = 'page';
     const REQUEST_TYPE_EVENT = 'event';
-    const REQUEST_TYPE_TRANSACTION = 'tran';
+    const REQUEST_TYPE_TRANSACTION = 'transaction';
     const REQUEST_TYPE_ITEM = 'item';
 
     const SCOPE_VISITOR = 1;
@@ -30,18 +30,12 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
     public function __construct($ga_account, $domain, $agent = 'GA Agent') {
         $init_data = array(
             'v'         => 1,
-            'tid'       => $ga_account,
-            'cid'       => 555,
+            'tid'       => $ga_account
 
-            'utmwv'     => '4.4sh',
-            'utmcs'     => 'UTF-8',
-            'utmul'     => 'en-us',
+            'de'        => 'UTF-8',
 
-            'utmn'      => $this->getRandomId(),
-            'utmhid'    => $this->getRandomId(),
-
-            'utmac'     => $ga_account,
-            'utmhn'     => $domain,
+            'ac'        => $ga_account,
+            'dh'        => $domain,
 
             'user_agent' => $agent,
 
@@ -66,15 +60,15 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmn'      => $this->getData('utmn'),
             'utmhn'     => $this->getData('utmhn'),
             'utmcs'     => $this->getData('utmcs'),
-            'utmje'     => $this->getData('utmje'),
+            'je'        => $this->getData('je'),
             'utmsc'     => $this->getData('utmsc'),
-            'utmsr'     => $this->getData('utmsr'),
-            'utmul'     => $this->getData('utmul'),
-            'utmdt'     => $title,
-            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandomId(),
-            'utmp'      => $page,
-            'utmac'     => $this->getData('utmac'),
-            'utmcc'     => $this->getData('utmcc') ? $this->getData('utmcc') : $this->getCookieParams(),
+            'sr'        => $this->getData('sr'),
+            'ul'        => $this->getData('ul'),
+            'dt'     => $title,
+            'hid'    => !is_null($utmhid) ? $utmhid : $this->getRandomId(),
+            'p'      => $page,
+            'ac'     => $this->getData('utmac'),
+            'cc'     => $this->getData('utmcc') ? $this->getData('utmcc') : $this->getCookieParams(),
             'utmr'      => $this->getData('utmr'),
             'utmip'     => $this->getData('utmip')
         );
@@ -91,32 +85,26 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
         $params = array(
             'v'         => $this->getData('v'),
             'tid'       => $this->getData('tid'),
-            'cid'       => $this->getData('cid'),
-            't'         => 'transaction',
-            'utmwv'     => $this->getData('utmwv'),
-            'utmn'      => $this->getData('utmn'),
-            'utmhn'     => $this->getData('utmhn'),
-            'utmt'      => self::REQUEST_TYPE_TRANSACTION,
-            'utmcs'     => $this->getData('utmcs'),
-            'utmje'     => $this->getData('utmje'),
-            'utmsc'     => $this->getData('utmsc'),
-            'utmsr'     => $this->getData('utmsr'),
-            'utmul'     => $this->getData('utmul'),
-            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandomId(),
-            'utmac'     => $this->getData('utmac'),
-            'utmcc'     => $this->getData('utmcc') ? $this->getData('utmcc') : $this->getCookieParams(),
-            'utmtid'    => $order_id,
-            'utmtst'    => $store_name,
-            'utmtto'    => $total,
-            'utmttx'    => $tax,
-            'utmtsp'    => $shipping,
-            'utmtci'    => $city,
-            'utmtrg'    => $region,
-            'utmtco'    => $country,
-            'utmr'      => $this->getData('utmr'),
-            'utmip'     => $this->getData('utmip'),
-            'ua'      => $this->getData('ua'),
-            'uip'     => $this->getData('uip')
+            'cid'       => $this->getRandomId(),
+            't'         => self::REQUEST_TYPE_TRANSACTION,
+            'dh'        => $this->getData('dh'),
+            'de'        => $this->getData('de'),
+            'je'        => $this->getData('je'),
+            'sc'        => $this->getData('sc'),
+            'sr'        => $this->getData('sr'),
+            'ul'        => $this->getData('ul'),
+            'cc'        => $this->getData('cc') ? $this->getData('cc') : $this->getCookieParams(),
+            'ti'        => $order_id,
+            'ta'        => $store_name,
+            'tr'        => $total,
+            'ts'        => $shipping,
+            'tt'        => $tax,
+            'tci'       => $city,
+            'trg'       => $region,
+            'tco'       => $country,
+            'r'         => $this->getData('r'),
+            'ua'        => $this->getData('ua'),
+            'uip'       => $this->getData('uip')
         );
 
         return $this->request($params);
