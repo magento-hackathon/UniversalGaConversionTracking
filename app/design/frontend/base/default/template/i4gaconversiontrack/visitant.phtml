@@ -1,0 +1,17 @@
+<input type="hidden" name="i4gaconversiontrack_user_agent" id="i4gaconversiontrack_user_agent" />
+<input type="hidden" name="i4gaconversiontrack_screen_resolution" id="i4gaconversiontrack_screen_resolution" />
+<input type="hidden" name="i4gaconversiontrack_screen_color_depth" id="i4gaconversiontrack_screen_color_depth" />
+<input type="hidden" name="i4gaconversiontrack_browser_language" id="i4gaconversiontrack_browser_language" />
+<input type="hidden" name="i4gaconversiontrack_browser_java_enabled" id="i4gaconversiontrack_browser_java_enabled" />
+<script type="text/javascript">
+$('i4gaconversiontrack_user_agent').value = navigator.userAgent;
+$('i4gaconversiontrack_screen_resolution').value = screen.width + 'x' + screen.height;
+$('i4gaconversiontrack_screen_color_depth').value = screen.colorDepth + '-bit';
+$('i4gaconversiontrack_browser_language').value = (navigator.language) ? navigator.language.toLowerCase() : navigator.userLanguage.toLowerCase();
+$('i4gaconversiontrack_browser_java_enabled').value = navigator.javaEnabled() ? 1 : 0;
+$('i4gaconversiontrack_user_agent').removeAttribute('disabled');
+$('i4gaconversiontrack_screen_resolution').removeAttribute('disabled');
+$('i4gaconversiontrack_screen_color_depth').removeAttribute('disabled');
+$('i4gaconversiontrack_browser_language').removeAttribute('disabled');
+$('i4gaconversiontrack_browser_java_enabled').removeAttribute('disabled');
+</script>

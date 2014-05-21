@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * GAConversionTrack
+ *
+ * @category    Interactiv4
+ * @package     Interactiv4_GAConversionTrack
+ * @copyright   Copyright (c) 2012 Interactiv4 SL. (http://www.interactiv4.com)
+ */
+-->
+<layout version="0.1.0">
+    <checkout_onepage_success>
+        <reference name="after_body_start">
+            <remove name="google_analytics" />
+        </reference>
+    </checkout_onepage_success>
+
+    <checkout_multishipping_success>
+        <reference name="after_body_start">
+            <remove name="google_analytics" />
+        </reference>
+    </checkout_multishipping_success>
+
+    <checkout_onepage_paymentmethod>
+        <reference name="root">
+            <block type="core/template" name="visitant.info" template="i4gaconversiontrack/visitant.phtml" output="toHtml" />
+        </reference>
+    </checkout_onepage_paymentmethod>
+
+    <onestepcheckout_index_index>
+        <reference name="head">
+            <action method="addJs"><script>i4gaconversiontrack/i4gaconversiontrack.js</script></action>
+        </reference>
+    </onestepcheckout_index_index>
+
+    <gomage_checkout_onepage_index>
+        <reference name="head">
+            <action method="addJs"><script>i4gaconversiontrack/i4gaconversiontrack.js</script></action>
+        </reference>
+    </gomage_checkout_onepage_index>
+</layout>

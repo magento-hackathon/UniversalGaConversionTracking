@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * GAConversionTrack
+ *
+ * @category    Interactiv4
+ * @package     Interactiv4_GAConversionTrack
+ * @copyright   Copyright (c) 2012 Interactiv4 SL. (http://www.interactiv4.com)
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <i4gaconversiontrack translate="title" module="i4gaconversiontrack">
+                                        <title>GAConversionTrack</title>
+                                        <sort_order>1000</sort_order>
+                                    </i4gaconversiontrack>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

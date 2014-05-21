@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+    <name>Interactiv4_GAConversionTrack</name>
+    <version>0.1.5b</version>
+    <stability>beta</stability>
+    <license uri="http://www.interactiv4.com/">interactiv4</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Google Analytics Conversion Track</summary>
+    <description>Google Analytics Conversion Track</description>
+    <notes>Version 0.1.0b (25-Enero-2013)&#xD;
+ - A&#xF1;adido la columna i4gaconversiontrack_tracked en la tabla sales_flat_order&#xD;
+ - Grabando en el historial del pedido las informaciones del Google Analytics Track&#xD;
+ &#xD;
+ Version 0.1.1b (25-Enero-2013)&#xD;
+ - Removido el codigo del Google Analytics de la pagina de checkout success&#xD;
+ &#xD;
+ Version 0.1.2b (30-Enero-2013)&#xD;
+ - Hotfix en el transaction&#xD;
+ &#xD;
+ Version 0.1.3b (1-Febrero-2013)&#xD;
+ - A&#xF1;adido los campos: user_agent, screen_resolution, screen_color_depth, browser_language, browser_java_enabled&#xD;
+ - A&#xF1;adido en la config los campos: Success Page Title y Success Page URL&#xD;
+ &#xD;
+ Version 0.1.4b (1-Febrero-2013)&#xD;
+ - A&#xF1;adido suporte para Onestepcheckout &#xD;
+ - A&#xF1;adido suporte para Gomage Checkout&#xD;
+&#xD;
+ Version 0.1.5b (1-Febrero-2013)&#xD;
+- Bug fixed: Removendo google analytics mismo cuando esta desactivado</notes>
+    <authors><author><name>Interactiv4</name><user>interactiv4</user><email>info@interactiv4.com</email></author></authors>
+    <date>2013-02-12</date>
+    <time>17:38:09</time>
+    <contents><target name="magelocal"><dir name="Interactiv4"><dir name="GAConversionTrack"><dir name="Helper"><file name="Data.php" hash="48807714d83a6eb8741d64c40137b26f"/></dir><dir name="Model"><file name="Observer.php" hash="cd315c0d5c36a6a8d02ff3012e628333"/><dir name="System"><dir name="Config"><dir name="Order"><file name="Status.php" hash="fda5b82d1371d0b1ddc7447e7d0243b8"/></dir><file name=".DS_Store" hash="d2b047e554e52abe7e157b986c1709ab"/></dir></dir><file name="Tracking.php" hash="c8909fe149bff1024f6237a670bc695a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="50517d993041398dd9dee1f3365ce1f8"/><file name="config.xml" hash="3bc7b830c4eb42b060601df19dd1ab31"/><file name="system.xml" hash="1073493e60ebaf70dbf29af0d00884a8"/></dir><dir name="sql"><dir name="i4gaconversiontrack_setup"><file name="mysql4-install-0.1.0.php" hash="052773960ea36917662598458f9c1a31"/><file name="mysql4-upgrade-0.1.0-0.1.1.php" hash="ac74075c53ece1b7aa44714208f6f468"/><file name="mysql4-upgrade-0.1.2-0.1.3.php" hash="718f53276e4a294c3191e69d36b563cd"/></dir></dir><file name=".DS_Store" hash="8ef0b463f41160b712ac5092c3e10936"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Interactiv4_GAConversionTrack.xml" hash="6bd8eb37b1a0d447b074611479f5719a"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="i4gaconversiontrack.xml" hash="b60768286284cd57211d802b6604a51f"/></dir><dir name="template"><dir name="i4gaconversiontrack"><file name="visitant.phtml" hash="635d23956ee9fe96faa77fadee0d873d"/></dir></dir></dir></dir></dir></target><target name="mage"><dir name="js"><dir name="i4gaconversiontrack"><file name="i4gaconversiontrack.js" hash="ad68285f68c09344cf7a3df540e85446"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

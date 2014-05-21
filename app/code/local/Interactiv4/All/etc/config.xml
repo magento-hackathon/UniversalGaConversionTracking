@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * All
+ *
+ * @category    Interactiv4
+ * @package     Interactiv4_All
+ * @copyright   Copyright (c) 2013 Interactiv4 SL. (http://www.interactiv4.com)
+ */
+-->
+<config>
+    <modules>
+        <Interactiv4_All>
+            <version>0.1.0</version>
+        </Interactiv4_All>
+    </modules>
+    <adminhtml>
+		<translate>
+            <modules>
+                <i4all>
+                    <files>
+                        <default>i4all.csv</default>
+                    </files>
+                </i4all>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <i4all>
+                    <file>i4all.xml</file>
+                </i4all>
+            </updates>
+        </layout>
+    </adminhtml> 
+	<global>
+	    <blocks>
+	        <i4all>
+	            <class>Interactiv4_All_Block</class>
+            </i4all>
+        </blocks>
+        <helpers>
+            <i4all>
+                <class>Interactiv4_All_Helper</class>
+            </i4all>
+        </helpers>
+    </global>
+</config>

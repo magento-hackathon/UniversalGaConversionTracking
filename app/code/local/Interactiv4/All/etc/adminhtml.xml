@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * All
+ *
+ * @category    Interactiv4
+ * @package     Interactiv4_All
+ * @copyright   Copyright (c) 2013 Interactiv4 SL. (http://www.interactiv4.com)
+ */
+-->
+<config>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+                <children>
+                    <system>
+                        <children>
+                        	<config>
+                        		<children>
+	                                <i4all>
+	                                    <title>Interactiv4</title>
+	                                    <sort_order>1000</sort_order>
+	                                </i4all>
+								</children>
+							</config>
+                        </children>
+                   </system>
+                </children>
+            </admin>
+		</resources>
+	</acl>
+</config>

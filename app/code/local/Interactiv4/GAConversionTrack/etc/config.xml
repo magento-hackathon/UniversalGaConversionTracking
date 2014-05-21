@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * GAConversionTrack
+ *
+ * @category    Interactiv4
+ * @package     Interactiv4_GAConversionTrack
+ * @copyright   Copyright (c) 2012 Interactiv4 SL. (http://www.interactiv4.com)
+ */
+-->
+<config>
+    <modules>
+        <Interactiv4_GAConversionTrack>
+            <version>0.1.6</version>
+        </Interactiv4_GAConversionTrack>
+    </modules>
+    <global>
+        <models>
+            <i4gaconversiontrack>
+                <class>Interactiv4_GAConversionTrack_Model</class>
+            </i4gaconversiontrack>
+        </models>
+        <resources>
+            <i4gaconversiontrack_setup>
+                <setup>
+                   <module>Interactiv4_GAConversionTrack</module>
+                   <class>Mage_Sales_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </i4gaconversiontrack_setup>
+            <i4gaconversiontrack_write>
+                <connection>
+                   <use>core_write</use>
+                </connection>
+            </i4gaconversiontrack_write>
+            <i4gaconversiontrack_read>
+                <connection>
+                   <use>core_read</use>
+                </connection>
+            </i4gaconversiontrack_read>
+        </resources>
+        <helpers>
+            <i4gaconversiontrack>
+                <class>Interactiv4_GAConversionTrack_Helper</class>
+            </i4gaconversiontrack>
+        </helpers>
+        <blocks>
+            <i4gaconversiontrack>
+                <class>Interactiv4_GAConversionTrack_Block</class>
+            </i4gaconversiontrack>
+        </blocks>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <i4gaconversiontrack_save_fields>
+                        <type>singleton</type>
+                        <class>i4gaconversiontrack/observer</class>
+                        <method>saveFields</method>
+                    </i4gaconversiontrack_save_fields>
+                </observers>
+            </sales_order_place_after>
+            <sales_order_save_after>
+                <observers>
+                    <i4gaconversiontrack_track>
+                        <type>singleton</type>
+                        <class>i4gaconversiontrack/observer</class>
+                        <method>track</method>
+                    </i4gaconversiontrack_track>
+                </observers>
+            </sales_order_save_after>
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <i4gaconversiontrack>
+                    <file>i4gaconversiontrack.xml</file>
+                </i4gaconversiontrack>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <i4gaconversiontrack>
+            <general>
+                <page_title>Checkout success</page_title>
+                <page_url>/checkout/onepage/success</page_url>
+            </general>
+        </i4gaconversiontrack>
+    </default>
+</config>

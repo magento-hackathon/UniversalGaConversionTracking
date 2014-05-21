@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * All
+ *
+ * @category    Interactiv4
+ * @package     Interactiv4_All
+ * @copyright   Copyright (c) 2013 Interactiv4 SL. (http://www.interactiv4.com)
+ */
+-->
+<config>
+    <tabs>
+        <i4all translate="label" module="i4all">
+            <label>Interactiv4</label>
+            <sort_order>100</sort_order>
+        </i4all>
+    </tabs>    
+    <sections>
+        <i4all translate="label" module="i4all">
+            <label>Interactiv4</label>
+            <tab>i4all</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <sort_order>100</sort_order>
+            <groups>
+                <extensions translate="label">
+                    <label>Installed Extensions</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>i4all/system_config_form_fieldset_i4_extensions</frontend_model>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </extensions>
+            </groups>
+        </i4all>
+    </sections>
+</config>
