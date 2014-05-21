@@ -92,8 +92,6 @@
 !/js
 /js/*
 !/js/i4gaconversiontrack
-/js/i4gaconversiontrack/*
-!/js/i4gaconversiontrack/i4gaconversiontrack.js
 !/package.xml
 !.gitignore
 
