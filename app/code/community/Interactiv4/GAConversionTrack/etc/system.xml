@@ -35,7 +35,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </active>
-                        <order_status>
+                        <order_status tranlate="label">
                             <label>Order Statuses to Track for Ecommerce conversions</label>
                             <frontend_type>select</frontend_type>
                             <frontend_model>i4gaconversiontrack/system_config_form_field_statustotrack</frontend_model>
