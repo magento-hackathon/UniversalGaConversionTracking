@@ -21,10 +21,10 @@
         </reference>
         <reference name="before_body_end">
             <block type="core/template" name="social" template="i4gaconversiontrack/social_interactions.phtml" output="toHtml">
-                <action method="setData"><name>fb_like</name><value>1</value></action>
-                <action method="setData"><name>fb_unlike</name><value>1</value></action>
-                <action method="setData"><name>fb_share</name><value>1</value></action>
-                <action method="setData"><name>twitter_interactions</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/fb_like"><name>fb_like</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/fb_unlike"><name>fb_unlike</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/fb_share"><name>fb_share</name><value>1</value></action>
+                <action method="setData" ifconfig="i4gaconversiontrack/social/twitter_interactions"><name>twitter_interactions</name><value>1</value></action>
             </block>
         </reference>
     </default>
