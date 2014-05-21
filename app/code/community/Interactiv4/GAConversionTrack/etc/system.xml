@@ -35,7 +35,7 @@
                             <show_in_store>1</show_in_store>
                         </active>
                         <order_status>
-                            <label>Order Statuses to Track</label>
+                            <label>Order Statuses to Track for Ecommerce conversions</label>
                             <frontend_type>select</frontend_type>
                             <frontend_model>i4gaconversiontrack/system_config_form_field_statustotrack</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
@@ -66,6 +66,34 @@
                         </page_url>
                     </fields>
                 </general>
+                <social>
+                    <label>Social interactions</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fb_like translate="label">
+                            <label>Track Facebook like interactions</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fb_like>
+                        <twitter_interactions translate="label">
+                            <label>Track Twitter interactions</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>This tracks the following actions; follow, unfollow, tweet, retweet, favorite</comment>
+                        </twitter_interactions>
+                    </fields>
+                </social>
             </groups>
         </i4gaconversiontrack>
     </sections>
