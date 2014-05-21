@@ -34,8 +34,8 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmcs'     => 'UTF-8',
             'utmul'     => 'en-us',
 
-            'utmn'      => $this->getRandonId(),
-            'utmhid'    => $this->getRandonId(),
+            'utmn'      => $this->getRandomId(),
+            'utmhid'    => $this->getRandomId(),
 
             'utmac'     => $ga_account,
             'utmhn'     => $domain,
@@ -64,7 +64,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmsr'     => $this->getData('utmsr'),
             'utmul'     => $this->getData('utmul'),
             'utmdt'     => $title,
-            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandonId(),
+            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandomId(),
             'utmp'      => $page,
             'utmac'     => $this->getData('utmac'),
             'utmcc'     => $this->getData('utmcc') ? $this->getData('utmcc') : $this->getCookieParams(),
@@ -91,7 +91,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmsc'     => $this->getData('utmsc'),
             'utmsr'     => $this->getData('utmsr'),
             'utmul'     => $this->getData('utmul'),
-            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandonId(),
+            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandomId(),
             'utmac'     => $this->getData('utmac'),
             'utmcc'     => $this->getData('utmcc') ? $this->getData('utmcc') : $this->getCookieParams(),
             'utmtid'    => $order_id,
@@ -124,7 +124,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
             'utmsc'     => $this->getData('utmsc'),
             'utmsr'     => $this->getData('utmsr'),
             'utmul'     => $this->getData('utmul'),
-            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandonId(),
+            'utmhid'    => !is_null($utmhid) ? $utmhid : $this->getRandomId(),
             'utmac'     => $this->getData('utmac'),
             'utmcc'     => $this->getData('utmcc') ? $this->getData('utmcc') : $this->getCookieParams(),
             'utmtid'    => $order_id,
@@ -177,10 +177,10 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
     }
 
     /**
-     * Randon ID
+     * Random ID
      * @return int
      */
-    public function getRandonId(){
+    public function getRandomId(){
         return rand(10000000,99999999);
     }
 
@@ -210,7 +210,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
      * @return String
      */
     public function getCookieParams($utma1 = null, $utma2 = null, $today = null) {
-        $utma1  = !is_null($utma1) ? $utma1 : $this->getRandonId();
+        $utma1  = !is_null($utma1) ? $utma1 : $this->getRandomId();
         $utma2  = !is_null($utma2) ? $utma2 : rand(0, 1147483647) + 1000000000;
         $today   = !is_null($today) ? $today : time();
 
