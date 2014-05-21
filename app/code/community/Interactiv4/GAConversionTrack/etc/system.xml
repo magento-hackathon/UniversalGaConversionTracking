@@ -101,6 +101,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <comment><![CDATA[For some reason observing this event doesnt work!]]></comment>
                         </fb_share>
                         <twitter_interactions translate="label">
                             <label>Track Twitter interactions</label>
