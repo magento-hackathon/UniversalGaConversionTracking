@@ -2,41 +2,41 @@
 #
 # app
 # app/code
-# app/code/local
-# app/code/local/Interactiv4
-# app/code/local/Interactiv4/All
-# app/code/local/Interactiv4/All/Block
-# app/code/local/Interactiv4/All/Block/System
-# app/code/local/Interactiv4/All/Block/System/Config
-# app/code/local/Interactiv4/All/Block/System/Config/Form
-# app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset
-# app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset/I4
-# app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset/I4/Extensions.php
-# app/code/local/Interactiv4/All/etc
-# app/code/local/Interactiv4/All/etc/adminhtml.xml
-# app/code/local/Interactiv4/All/etc/config.xml
-# app/code/local/Interactiv4/All/etc/system.xml
-# app/code/local/Interactiv4/All/Helper
-# app/code/local/Interactiv4/All/Helper/Data.php
-# app/code/local/Interactiv4/GAConversionTrack
-# app/code/local/Interactiv4/GAConversionTrack/etc
-# app/code/local/Interactiv4/GAConversionTrack/etc/adminhtml.xml
-# app/code/local/Interactiv4/GAConversionTrack/etc/config.xml
-# app/code/local/Interactiv4/GAConversionTrack/etc/system.xml
-# app/code/local/Interactiv4/GAConversionTrack/Helper
-# app/code/local/Interactiv4/GAConversionTrack/Helper/Data.php
-# app/code/local/Interactiv4/GAConversionTrack/Model
-# app/code/local/Interactiv4/GAConversionTrack/Model/Observer.php
-# app/code/local/Interactiv4/GAConversionTrack/Model/System
-# app/code/local/Interactiv4/GAConversionTrack/Model/System/Config
-# app/code/local/Interactiv4/GAConversionTrack/Model/System/Config/Order
-# app/code/local/Interactiv4/GAConversionTrack/Model/System/Config/Order/Status.php
-# app/code/local/Interactiv4/GAConversionTrack/Model/Tracking.php
-# app/code/local/Interactiv4/GAConversionTrack/sql
-# app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup
-# app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-install-0.1.0.php
-# app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.0-0.1.1.php
-# app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.2-0.1.3.php
+# app/code/community
+# app/code/community/Interactiv4
+# app/code/community/Interactiv4/All
+# app/code/community/Interactiv4/All/Block
+# app/code/community/Interactiv4/All/Block/System
+# app/code/community/Interactiv4/All/Block/System/Config
+# app/code/community/Interactiv4/All/Block/System/Config/Form
+# app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset
+# app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset/I4
+# app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset/I4/Extensions.php
+# app/code/community/Interactiv4/All/etc
+# app/code/community/Interactiv4/All/etc/adminhtml.xml
+# app/code/community/Interactiv4/All/etc/config.xml
+# app/code/community/Interactiv4/All/etc/system.xml
+# app/code/community/Interactiv4/All/Helper
+# app/code/community/Interactiv4/All/Helper/Data.php
+# app/code/community/Interactiv4/GAConversionTrack
+# app/code/community/Interactiv4/GAConversionTrack/etc
+# app/code/community/Interactiv4/GAConversionTrack/etc/adminhtml.xml
+# app/code/community/Interactiv4/GAConversionTrack/etc/config.xml
+# app/code/community/Interactiv4/GAConversionTrack/etc/system.xml
+# app/code/community/Interactiv4/GAConversionTrack/Helper
+# app/code/community/Interactiv4/GAConversionTrack/Helper/Data.php
+# app/code/community/Interactiv4/GAConversionTrack/Model
+# app/code/community/Interactiv4/GAConversionTrack/Model/Observer.php
+# app/code/community/Interactiv4/GAConversionTrack/Model/System
+# app/code/community/Interactiv4/GAConversionTrack/Model/System/Config
+# app/code/community/Interactiv4/GAConversionTrack/Model/System/Config/Order
+# app/code/community/Interactiv4/GAConversionTrack/Model/System/Config/Order/Status.php
+# app/code/community/Interactiv4/GAConversionTrack/Model/Tracking.php
+# app/code/community/Interactiv4/GAConversionTrack/sql
+# app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup
+# app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-install-0.1.0.php
+# app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.0-0.1.1.php
+# app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.2-0.1.3.php
 # app/design
 # app/design/frontend
 # app/design/frontend/base
@@ -60,61 +60,61 @@
 /app/*
 !/app/code
 /app/code/*
-!/app/code/local
-/app/code/local/*
-!/app/code/local/Interactiv4
-/app/code/local/Interactiv4/*
-!/app/code/local/Interactiv4/All
-/app/code/local/Interactiv4/All/*
-!/app/code/local/Interactiv4/All/Block
-/app/code/local/Interactiv4/All/Block/*
-!/app/code/local/Interactiv4/All/Block/System
-/app/code/local/Interactiv4/All/Block/System/*
-!/app/code/local/Interactiv4/All/Block/System/Config
-/app/code/local/Interactiv4/All/Block/System/Config/*
-!/app/code/local/Interactiv4/All/Block/System/Config/Form
-/app/code/local/Interactiv4/All/Block/System/Config/Form/*
-!/app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset
-/app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset/*
-!/app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset/I4
-/app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset/I4/*
-!/app/code/local/Interactiv4/All/Block/System/Config/Form/Fieldset/I4/Extensions.php
-!/app/code/local/Interactiv4/All/etc
-/app/code/local/Interactiv4/All/etc/*
-!/app/code/local/Interactiv4/All/etc/adminhtml.xml
-!/app/code/local/Interactiv4/All/etc/config.xml
-!/app/code/local/Interactiv4/All/etc/system.xml
-!/app/code/local/Interactiv4/All/Helper
-/app/code/local/Interactiv4/All/Helper/*
-!/app/code/local/Interactiv4/All/Helper/Data.php
-!/app/code/local/Interactiv4/GAConversionTrack
-/app/code/local/Interactiv4/GAConversionTrack/*
-!/app/code/local/Interactiv4/GAConversionTrack/etc
-/app/code/local/Interactiv4/GAConversionTrack/etc/*
-!/app/code/local/Interactiv4/GAConversionTrack/etc/adminhtml.xml
-!/app/code/local/Interactiv4/GAConversionTrack/etc/config.xml
-!/app/code/local/Interactiv4/GAConversionTrack/etc/system.xml
-!/app/code/local/Interactiv4/GAConversionTrack/Helper
-/app/code/local/Interactiv4/GAConversionTrack/Helper/*
-!/app/code/local/Interactiv4/GAConversionTrack/Helper/Data.php
-!/app/code/local/Interactiv4/GAConversionTrack/Model
-/app/code/local/Interactiv4/GAConversionTrack/Model/*
-!/app/code/local/Interactiv4/GAConversionTrack/Model/Observer.php
-!/app/code/local/Interactiv4/GAConversionTrack/Model/System
-/app/code/local/Interactiv4/GAConversionTrack/Model/System/*
-!/app/code/local/Interactiv4/GAConversionTrack/Model/System/Config
-/app/code/local/Interactiv4/GAConversionTrack/Model/System/Config/*
-!/app/code/local/Interactiv4/GAConversionTrack/Model/System/Config/Order
-/app/code/local/Interactiv4/GAConversionTrack/Model/System/Config/Order/*
-!/app/code/local/Interactiv4/GAConversionTrack/Model/System/Config/Order/Status.php
-!/app/code/local/Interactiv4/GAConversionTrack/Model/Tracking.php
-!/app/code/local/Interactiv4/GAConversionTrack/sql
-/app/code/local/Interactiv4/GAConversionTrack/sql/*
-!/app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup
-/app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/*
-!/app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-install-0.1.0.php
-!/app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.0-0.1.1.php
-!/app/code/local/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.2-0.1.3.php
+!/app/code/community
+/app/code/community/*
+!/app/code/community/Interactiv4
+/app/code/community/Interactiv4/*
+!/app/code/community/Interactiv4/All
+/app/code/community/Interactiv4/All/*
+!/app/code/community/Interactiv4/All/Block
+/app/code/community/Interactiv4/All/Block/*
+!/app/code/community/Interactiv4/All/Block/System
+/app/code/community/Interactiv4/All/Block/System/*
+!/app/code/community/Interactiv4/All/Block/System/Config
+/app/code/community/Interactiv4/All/Block/System/Config/*
+!/app/code/community/Interactiv4/All/Block/System/Config/Form
+/app/code/community/Interactiv4/All/Block/System/Config/Form/*
+!/app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset
+/app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset/*
+!/app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset/I4
+/app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset/I4/*
+!/app/code/community/Interactiv4/All/Block/System/Config/Form/Fieldset/I4/Extensions.php
+!/app/code/community/Interactiv4/All/etc
+/app/code/community/Interactiv4/All/etc/*
+!/app/code/community/Interactiv4/All/etc/adminhtml.xml
+!/app/code/community/Interactiv4/All/etc/config.xml
+!/app/code/community/Interactiv4/All/etc/system.xml
+!/app/code/community/Interactiv4/All/Helper
+/app/code/community/Interactiv4/All/Helper/*
+!/app/code/community/Interactiv4/All/Helper/Data.php
+!/app/code/community/Interactiv4/GAConversionTrack
+/app/code/community/Interactiv4/GAConversionTrack/*
+!/app/code/community/Interactiv4/GAConversionTrack/etc
+/app/code/community/Interactiv4/GAConversionTrack/etc/*
+!/app/code/community/Interactiv4/GAConversionTrack/etc/adminhtml.xml
+!/app/code/community/Interactiv4/GAConversionTrack/etc/config.xml
+!/app/code/community/Interactiv4/GAConversionTrack/etc/system.xml
+!/app/code/community/Interactiv4/GAConversionTrack/Helper
+/app/code/community/Interactiv4/GAConversionTrack/Helper/*
+!/app/code/community/Interactiv4/GAConversionTrack/Helper/Data.php
+!/app/code/community/Interactiv4/GAConversionTrack/Model
+/app/code/community/Interactiv4/GAConversionTrack/Model/*
+!/app/code/community/Interactiv4/GAConversionTrack/Model/Observer.php
+!/app/code/community/Interactiv4/GAConversionTrack/Model/System
+/app/code/community/Interactiv4/GAConversionTrack/Model/System/*
+!/app/code/community/Interactiv4/GAConversionTrack/Model/System/Config
+/app/code/community/Interactiv4/GAConversionTrack/Model/System/Config/*
+!/app/code/community/Interactiv4/GAConversionTrack/Model/System/Config/Order
+/app/code/community/Interactiv4/GAConversionTrack/Model/System/Config/Order/*
+!/app/code/community/Interactiv4/GAConversionTrack/Model/System/Config/Order/Status.php
+!/app/code/community/Interactiv4/GAConversionTrack/Model/Tracking.php
+!/app/code/community/Interactiv4/GAConversionTrack/sql
+/app/code/community/Interactiv4/GAConversionTrack/sql/*
+!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup
+/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/*
+!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-install-0.1.0.php
+!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.0-0.1.1.php
+!/app/code/community/Interactiv4/GAConversionTrack/sql/i4gaconversiontrack_setup/mysql4-upgrade-0.1.2-0.1.3.php
 !/app/design
 /app/design/*
 !/app/design/frontend

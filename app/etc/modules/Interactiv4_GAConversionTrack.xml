@@ -2,7 +2,7 @@
     <modules>
         <Interactiv4_GAConversionTrack>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
             <depends>
                 <Interactiv4_All />
                 <Mage_GoogleAnalytics />
