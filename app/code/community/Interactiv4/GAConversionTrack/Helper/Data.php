@@ -10,6 +10,7 @@ class Interactiv4_GAConversionTrack_Helper_Data extends Mage_Core_Helper_Abstrac
 {
     const XML_PATH_ACTIVE = 'i4gaconversiontrack/general/active';
     const XML_PATH_ORDER_STATUS = 'i4gaconversiontrack/general/order_status';
+    const XML_PATH_ACCOUNT = 'google/analytics/account';
 
     public function isAvailable($store = null) {
         $isActive = Mage::getStoreConfigFlag(self::XML_PATH_ACTIVE, $store);
