@@ -1,0 +1,5 @@
+app/code/community/Interactiv4/* app/code/community/Interactiv4/
+app/design/frontend/base/default/layout/* app/design/frontend/base/default/layout/
+app/design/frontend/base/default/template/* app/design/frontend/base/default/template/
+app/etc/modules/*.xml app/etc/modules/
+js/i4gaconversiontrack/* js/i4gaconversiontrack/
