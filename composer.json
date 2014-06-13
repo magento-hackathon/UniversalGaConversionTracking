@@ -1,5 +1,5 @@
 {
-    "name": "hackathon/universaltracking",
+    "name": "interactiv4/universaltracking",
     "type": "magento-module",
     "license": "OSL-3.0",
     "description": "-Track orders in Google Analytics based on status/state change. - Use the new Universal Google Analytics.",
