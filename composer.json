@@ -1,0 +1,11 @@
+{
+    "name": "hackathon/universaltracking",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "description": "-Track orders in Google Analytics based on status/state change. - Use the new Universal Google Analytics.",
+    "keywords": ["Google", "Magento", "Analytics", "Universal"],
+    "homepage": "https://github.com/magento-hackathon/UniversalGaConversionTracking",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
