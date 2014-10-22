@@ -16,24 +16,25 @@
  * @author      Atwix Core Team
  * @copyright   Copyright (c) 2012 Atwix (http://www.atwix.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @var $this Atwix_UniversalAnalytics_Block_Ua
+ * @var $this Interactiv4_GAConversionTrack_Block_Ua
  */
 ?>
-<?php $accountId = Mage::getStoreConfig(Interactiv4_GAConversionTrack_Helper_Data::XML_PATH_ACCOUNT) ?>
+<?php $accountId = Mage::helper('i4gaconversiontrack')->getAccount(); ?>
+<?php if ($accountId):?>
 <!-- BEGIN GOOGLE UNIVERSAL ANALYTICS CODEs -->
 <script type="text/javascript">
-    //<![CDATA[
+//<![CDATA[
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
     { (i[r].q=i[r].q||[]).push(arguments)}
         ,i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
 
-    __gaTracker('create', '<?php echo $accountId ?>', '<?php echo $this->getRequest()->getHttpHost() ?>');
+    __gaTracker('create', '<?php echo $accountId ?>', <?php echo $this->getAccountParams() ?>);
     __gaTracker('send', 'pageview');
-
     <?php echo $this->_getOrdersTrackingCode() ?>
 
-    //]]>
+//]]>
 </script>
 <!-- END GOOGLE UNIVERSAL ANALYTICS CODEs -->
+<?php endif; ?>
