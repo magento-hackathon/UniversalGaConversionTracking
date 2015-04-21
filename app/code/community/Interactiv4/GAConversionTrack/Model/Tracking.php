@@ -30,7 +30,7 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
     public function __construct($ga_account, $domain, $agent = 'GA Agent') {
         $init_data = array(
             'v'         => 1,
-            'tid'       => $ga_account
+            'tid'       => $ga_account,
 
             'de'        => 'UTF-8',
 
@@ -219,7 +219,6 @@ class Interactiv4_GAConversionTrack_Model_Tracking extends Varien_Object
     }
 
     public function __toString(){
-        $socket = fsockopen(GA_URL);
         return self::GA_URL . http_build_query($this->getData());
     }
 }
