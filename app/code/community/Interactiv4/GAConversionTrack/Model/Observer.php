@@ -24,11 +24,11 @@ class Interactiv4_GAConversionTrack_Model_Observer
                     $pass = true; // if any of the state/status combination matches, pass it through
                 }
             }
-            if(!$pass) return;
+            if (!$pass) return;
             $store = Mage::app()->getStore($order->getStoreId());
             $googleAnalyticsAccountId = Mage::helper('i4gaconversiontrack')->getGoogleAnalyticsAccountId($order->getStoreId());
             $domain = parse_url($store->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB), PHP_URL_HOST);
-            $trackData = unserialize($order->getData('i4gaconversiontrack_track_data'));
+            $trackData =  $this->addTrackingDataToOrder($order);
             $ga_tracking = new Interactiv4_GAConversionTrack_Model_Tracking(
                 $googleAnalyticsAccountId,
                 $domain,
@@ -79,8 +79,30 @@ class Interactiv4_GAConversionTrack_Model_Observer
         }
     }
 
+
     public function saveFields($observer) {
         $order = $observer->getEvent()->getOrder();
+        $this->addTrackingDataToOrder($order);
+    }
+
+    /**
+     * Get tracking data from order or request
+     * @param Mage_Sales_Model_Order $order
+     * @return Varien_Object
+     */
+    protected function addTrackingDataToOrder($order) {
+        $trackedData = unserialize($order->getData('i4gaconversiontrack_track_data'));
+        if ($trackedData === false) {
+            $trackedData = $this->extractTrackDataFromRequest();
+            $order->setData('i4gaconversiontrack_track_data', serialize($trackedData));
+        }
+        return $trackedData;
+    }
+
+    /**
+     * @return Varien_Object
+     */
+    protected function extractTrackDataFromRequest() {
         $request = Mage::app()->getRequest();
         /* Set data in serialized object in the order to allow easy adding of new attributes */
         $trackData = new Varien_Object();
@@ -89,9 +111,9 @@ class Interactiv4_GAConversionTrack_Model_Observer
         $trackData->setData('i4gaconversiontrack_screen_color_depth', $request->getParam('i4gaconversiontrack_screen_color_depth'));
         $trackData->setData('i4gaconversiontrack_browser_language', $request->getParam('i4gaconversiontrack_browser_language'));
         $trackData->setData('i4gaconversiontrack_browser_java_enabled', $request->getParam('i4gaconversiontrack_browser_java_enabled'));
-        $order->setData('i4gaconversiontrack_track_data', serialize($trackData));
+        return $trackData;
     }
-    
+
     /**
      * Add order information into GA block to render on checkout success pages
      *
