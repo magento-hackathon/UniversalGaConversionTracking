@@ -27,4 +27,9 @@ class Interactiv4_GAConversionTrack_Helper_Data extends Mage_Core_Helper_Abstrac
         $statusesToTrack = unserialize(Mage::getStoreConfig(self::XML_PATH_ORDER_STATUS, $store));
         return $statusesToTrack;
     }
+
+    public function getAccount($store = null)
+    {
+        return Mage::getStoreConfig(Interactiv4_GAConversionTrack_Helper_Data::XML_PATH_ACCOUNT, $store);
+    }
 }

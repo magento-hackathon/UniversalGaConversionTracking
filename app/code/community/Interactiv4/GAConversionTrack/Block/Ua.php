@@ -89,18 +89,11 @@ class Interactiv4_GAConversionTrack_Block_Ua extends Mage_Core_Block_Template
         return implode("\n", $result);
     }
 
-
-    /**
-     * Render Universal GA tracking scripts
-     *
-     * @return string
-     */
-    protected function _toHtml()
+    public function getAccountParams()
     {
-//        if (!Mage::helper('atwix_universalanalytics')->isUniversalGoogleAnalyticsAvailable()) {
-//            return '';
-//        }
-
-        return parent::_toHtml();
+        if (Mage::getIsDeveloperMode()) {
+            return Mage::helper('core')->jsonEncode(['cookieDomain' => 'none']);
+        }
+        return "'auto'";
     }
 }
